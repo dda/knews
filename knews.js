@@ -4,9 +4,9 @@ document.oncontextmenu=null;
 
 Object.prototype.remove=function() {
   var a=this.parentElement;
-  try{
+  if(a!=undefined) {
     a.removeChild(this);
-  } catch {
+  } else{
     this.innerHTML='';
     this.height=0;
     this.width=0;
